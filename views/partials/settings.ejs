@@ -1,0 +1,66 @@
+<section class="container d-none" id="settings">
+    <div class="row justify-content-between mx-0 align-items-stretch">
+        <div class="col-md-6 order-2 order-md-0 glass-panel p-4 mb-4 mb-md-0 text-white">
+            <h2 class="text-center mb-4 fw-bold text-info">⚙️ ڕێکخستنی یاری</h2>
+            
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="rounds">ژمارەی خولەکان</label>
+                <select class="form-select" id="rounds">
+                    <option value="2" selected>2 خول</option>
+                    <option value="3">3 خول</option>
+                    <option value="4">4 خول</option>
+                    <option value="5">5 خول</option>
+                    <option value="6">6 خول</option>
+                    <option value="7">7 خول</option>
+                    <option value="8">8 خول</option>
+                    <option value="9">9 خول</option>
+                    <option value="10">10 خول</option>
+                </select>
+            </div>
+            
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="time">کاتی کێشان (چرکە)</label>
+                <select class="form-select" id="time">
+                    <option value="30">30 چرکە</option>
+                    <option value="40" selected>40 چرکە</option>
+                    <option value="50">50 چرکە</option>
+                    <option value="60">60 چرکە</option>
+                    <option value="80">80 چرکە</option>
+                    <option value="100">100 چرکە</option>
+                    <option value="120">120 چرکە</option>
+                    <option value="150">150 چرکە</option>
+                    <option value="180">180 چرکە</option>
+                </select>
+            </div>
+            
+            <% if(!roomID) { %>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="customWords">وشەی تایبەت (ئارەزوومەندانا)</label>
+                <textarea class="form-control" placeholder="وشەی یەکەم&#10;وشەی دووەم&#10;وشەی سێیەم" id="customWords"
+                    style="height: 15vh; resize:none"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="probability" class="form-label d-flex justify-content-between">
+                    <span>ڕێژەی دەرکەوتنی وشە تایبەتەکان</span>
+                </label>
+                <input type="range" class="form-range" min="0" max="1" step="0.01" id="probability" value="0.5">
+            </div>
+            <% } %>
+            
+            <button class="btn btn-primary w-100 py-2 h5 fw-bold" id="startGame">دەستپێکردنی یاری 🎮</button>
+        </div>
+        
+        <div class="col-md-5 glass-panel p-4 text-white">
+            <h2 class="text-center mb-4 fw-bold text-warning">👥 یاریزانە ئامادەبووەکان</h2>
+            <div class="row mt-3 mx-0 justify-content-start" style="max-height: 25em; overflow-y: auto;" id="playersDiv"></div>
+        </div>
+    </div>
+    
+    <div class="mt-4 glass-panel p-3 text-center text-white">
+        <h4 class="mb-3 fw-bold">🔗 هاوڕێکانت بانگهێشت بکە بۆ یاریکردن!</h4>
+        <div class="input-group">
+            <input type="text" id="gameLink" class="form-control text-center fw-bold bg-white text-dark" value="http://localhost:3000/" readonly>
+            <button class="btn btn-warning px-4 fw-bold text-dark" type="button" id="copy">کۆپیکردنی بەستەر</button>
+        </div>
+    </div>
+</section>
