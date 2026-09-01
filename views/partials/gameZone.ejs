@@ -1,0 +1,28 @@
+<section class="container-fluid container-xl d-none" id="gameZone">
+    <div class="game-header-banner" role="alert">
+        <div class="row align-items-center">
+            <div class="col-3 col-sm-2 text-center text-sm-start">
+                <span class="lead fw-bold mb-0" id="clock">0</span>
+            </div>
+            <div class="col-9 col-sm-8 text-center" id="wordDiv"></div>
+            <div class="col-sm-2 d-none d-sm-block"></div>
+        </div>
+    </div>
+    <div class="row justify-content-center g-3 mx-0">
+        <div class="col-12 col-md-3 col-lg-2 players order-2 order-md-1"></div>
+        <div class="col-12 col-md-9 col-lg-7 d-flex flex-column order-1 order-md-2">
+            <div class="sketchpad-container">
+                <div id="sketchpad"></div>
+            </div>
+            <%- include('tools') %>
+        </div>
+        <div class="col-12 col-lg-3 order-3">
+            <div class="glass-chat-container h-100">
+                <div class="messages"></div>
+                <form id="sendMessage">
+                    <input class="form-control" type="text" placeholder="پێشبینییەکەت لێرە بنووسە..." autocomplete="off">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

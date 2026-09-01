@@ -1,0 +1,41 @@
+<section class="container" id="landing">
+    <div class="row justify-content-center mx-0">
+        <div class="col-12 col-md-8 col-lg-5 glass-card p-4 p-md-5">
+            <h1 class="text-center section-title mb-4">Skribblrs.io</h1>
+            
+            <form id="landingForm" onsubmit="return false;">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="playerName" placeholder="ناو" autofocus autocomplete="off">
+                    <label for="playerName">ناو</label>
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text text-white fw-bold" for="style">شێواز</label>
+                    <select class="form-select" id="style">
+                        <option value="Avataaars" selected>ئەڤەتار</option>
+                        <option value="Bottts">ڕۆبۆت</option>
+                        <option value="Female">مێینە</option>
+                        <option value="Gridy">گرێدی</option>
+                        <option value="Human">مرۆڤ</option>
+                        <option value="Identicon">ئایدێنتیکۆن</option>
+                        <option value="Initials">پیتە سەرەتاییەکان</option>
+                        <option value="Jdenticon">جدێنتیکۆن</option>
+                        <option value="Male">نێرینە</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-4">
+                    <label class="input-group-text text-white fw-bold" for="bgColor">ڕەنگی پاشبنەما</label>
+                    <input type="color" class="form-control form-control-color" id="bgColor" value="#00f2fe"
+                        title="ڕەنگەکەت هەڵبژێرە">
+                </div>
+
+                <% if(!roomID) { %>
+                    <button type="button" class="btn btn-primary btn-lg w-100 py-3" id="createRoom">دروستکردنی ژووری تایبەت</button>
+                <% } else { %>
+                    <button type="button" class="btn btn-primary btn-lg w-100 py-3" id="playGame">چوونە ژوورەوە</button>
+                <% } %>
+            </form>
+        </div>
+    </div>
+</section>
